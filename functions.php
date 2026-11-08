@@ -1,3 +1,4 @@
+
 <?php
 declare(strict_types=1);
 
@@ -49,8 +50,4 @@ function filterKategori(array $produk, string $kategori): array
 function e(string $teks): string
 {
     return htmlspecialchars($teks, ENT_QUOTES, 'UTF-8');
-}
-function labelPromo(int $harga): string
-{
-    return $harga >= 100000 ? "Gratis Ongkir" : "";
 }
