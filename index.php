@@ -62,6 +62,9 @@ $nilaiStok = hitungNilaiStok($daftarProduk);
                 <?= e($produk["kategori"]) ?> · <?= e($produk["kode"]) ?>
             </p>
             <p class="harga"><?= formatRupiah($produk["harga"]) ?></p>
+            <?php if (labelPromo($produk["harga"]) !== ""): ?>
+    <p><?= e(labelPromo($produk["harga"])) ?></p>
+<?php endif; ?>
             <p class="stok">Stok: <?= $produk["stok"] ?></p>
         </article>
 
